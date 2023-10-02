@@ -1,8 +1,10 @@
+import iconecell from "../assets/icon.png";
+
 const experiences = [
   {
     title: "React.js Developer",
     company_name: "Starbucks",
-    // icon: starbucks,
+    icon: iconecell,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
@@ -28,7 +30,7 @@ const experiences = [
   {
     title: "Web Developer",
     company_name: "Shopify",
-    // icon: shopify,
+    icon: iconecell,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
