@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*font-family: 'Roboto', sans-serif; */
+html{
+    scroll-behavior:smooth;
+    color-scheme: dark;
+}
+.sponsers{
+    width: 100%;
+    height: 120vh;
+    background-image: url(../assets/sponserbackground.png);
+    background-repeat: no-repeat;
+    background-blend-mode:overlay;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.603);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+.sponsercontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1rem);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 0.7rem;
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 1rem rgba(0, 0, 0, 0.2);
+}
+/* .sponsercontainer::after{
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1rem);
+    position: absolute;
+    content: "";
+} */
+.sponsers h1{
+    font-weight: 700;
+    font-stretch: expanded;
+    font-size:3rem;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 3rem 2rem;
+    padding: 5rem; */
+    height: 48%;
+    width: 99%;
+}
+.sponseritem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin: 1rem 2rem;
+    padding: 1rem 5rem; */
+    width: 33%;
+    height: 90%;
+    border-radius: 0.5rem;
+}
+.sponsertext{
+    opacity: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.sponseritem:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    
+    .sponsercards img{
+        transform: scale(1.2);
+    }
+    .sponsertext{
+        opacity: 1;
+    }
+}
+.sponsercards{
+    height: 35%;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+}
+@media screen and (max-width:650px){
+    .sponsers{
+        height: 200vh;
+    }
+    .sponsercontainer{
+        height: 180vh;
+        padding: 5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .row{
+        flex-direction: column ;
+        height: 50%;
+        width: 100%;
+    }
+    .sponseritem{
+        height: 33%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0rem;
+    }
+    .sponseritem:hover{
+        height: 90%;
+    }
+    .sponsercards{
+        height: 40%;
+    }
+}

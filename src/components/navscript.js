@@ -24,15 +24,15 @@ function hide()
 //     //     // myNav.classList.remove("nav-colored");
 //     // }
 // };
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var scroll = $(window).scrollTop();
-        if (scroll > 1) {
-          $(".nav").css("background" , "white");
-        }
+// $(document).ready(function(){
+//     $(window).scroll(function(){
+//         var scroll = $(window).scrollTop();
+//         if (scroll > 1) {
+//           $(".nav").css("background" , "white");
+//         }
   
-        else{
-            $(".nav").css("background" , "#333");  	
-        }
-    })
-})
+//         else{
+//             $(".nav").css("background" , "#333");  	
+//         }
+//     })
+// })

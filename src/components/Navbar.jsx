@@ -1,14 +1,12 @@
 import ecellLogoWhite from "../assets/ecell-white-img.png";
 import { Link } from "react-router-dom";
 import React from 'react'
+import "./navstyle.css"
+import "./navscript.js"
 
 const Navbar = () => {
   return (
     <>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>JUGAAD 2023 | E-Cell, VNIT</title>
-      <link rel="stylesheet" href="navstyle.css" />
       <header>
         <div className="nav" id="mynav">
           <div className="upper">
@@ -28,10 +26,10 @@ const Navbar = () => {
               <a href="#home">Home</a>
             </li>
             <li className="navitem" id="item-2">
-              <a href="#about">About</a>
+              <a href="#About">About</a>
             </li>
             <li className="navitem" id="item-3">
-              <a href="#myprojects">Projects</a>
+              <a href="#Sponser">Sponsers</a>
             </li>
             <li className="navitem" id="item-4">
               <a href="#form">Contact</a>
