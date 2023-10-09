@@ -8,11 +8,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-black">
-        <section>
-          <Hero/>
-        </section>
+        <Hero/>
         <Timeline />
       </div>
+      <About/>
       <Footer />
     </BrowserRouter>
   );
