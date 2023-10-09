@@ -32,7 +32,7 @@ const Navbar = () => {
               <a href="#Sponser">Sponsers</a>
             </li>
             <li className="navitem" id="item-4">
-              <a href="#form">Contact</a>
+              <a href="#footer">Contact</a>
             </li>
           </ul>
         </div>
