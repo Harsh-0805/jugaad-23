@@ -1,5 +1,6 @@
 import ecellLogoWhite from "../assets/ecell-white-img.png";
 import { Link } from "react-router-dom";
+import React from 'react'
 
 const Navbar = () => {
   return (
@@ -12,7 +13,7 @@ const Navbar = () => {
         <div className="nav" id="mynav">
           <div className="upper">
             <span>
-              <img src="../assets/ecell-white-img.png" alt="logo" />
+              <img src={ecellLogoWhite} alt="logo" />
             </span>
             <div className="hamburger" id="hamburger" onclick="hide()">
               <ul>
