@@ -7,10 +7,10 @@ import Navbar from "./components/Navbar";
 const App = () => {
   return (
     <BrowserRouter>
-      <Navbar />
       <div className="relative z-0 bg-black">
         <Timeline />
       </div>
+      <Navbar />
       <Footer />
     </BrowserRouter>
   );

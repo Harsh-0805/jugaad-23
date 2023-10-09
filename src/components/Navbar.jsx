@@ -38,7 +38,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="extra">{/* <img src="../gym/gym.jpg" alt=""> */}</div>
       </header>
     </>
 
