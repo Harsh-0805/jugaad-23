@@ -1,0 +1,89 @@
+#bigabout{
+    background-image: url("jugaadaboutbg.jpg");
+}
+
+h2{
+    font-family: poppins;
+    font-size:3rem;
+    font-weight: 800;
+    animation: jugad 2s ease-in-out;
+    animation-iteration-count: 1;
+
+}
+@keyframes jugad{
+    0%{
+        transform:translateY(-30px);
+    }
+    50%{
+        transform:translateY(30px);
+    }
+}
+
+#parabout{
+    font-family: poppins;
+    font-size: 1.5rem;
+    margin-left:10%;
+    margin-right:10%;
+    animation: pxy 2s ease-out;
+    animation-iteration-count: 1;
+}
+@keyframes pxy{
+    0%{
+        transform:translateX(-30px);
+    }
+    50%{
+        transform:translateX(30px);
+    }
+}
+
+@media screen and (min-width: 601px) {
+    h2 {
+      font-size: 3rem;
+      margin: 0 0 2% 0;
+    }
+    #parabout{
+        font-size:1.5rem;
+        padding-bottom:2%;
+    }
+    #about{
+        max-width:20%;
+        margin-right: 10%;
+        margin-left: auto;
+        padding-bottom:4%;
+        animation: img 1s ease-out;
+        animation-iteration-count:infinite;
+    }
+    @keyframes img{
+        0%{
+            transform:translateX(60px);
+        }
+        50%{
+            transform:translateX(-60px);
+        }
+        100%{
+            transform:translateX(60px);
+        }
+    }
+    #aboutsec{
+        display: flex;
+    }
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 1.5rem;
+      border: 10% 0 10% 0;
+    }
+    #parabout{
+        font-size:0.75rem;
+        margin-bottom: 5%;
+    }
+    #about{
+        display: block;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+  }
