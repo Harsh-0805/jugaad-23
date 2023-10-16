@@ -14,15 +14,17 @@ const Hero = () => {
           THREE: THREE,
           mouseControls: true,
           touchControls: true,
-          gyroControls: false,
-          minHeight: 800.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0xffe13f,
-          backgroundColor: 0x18141f,
-          maxDistance: 18.00,
-          spacing: 16.00
+          gyroControls: true,
+          minHeight: 800.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0xd9d31e,
+          backgroundColor: 0x80414,
+          points: 11.0,
+          maxDistance: 24.0,
+          spacing: 17.0,
+          showDots: false,
         })
       );
     }
@@ -30,9 +32,6 @@ const Hero = () => {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-  return (
-    <div ref={vantaRef}>
-    </div>
-  );
+  return <div ref={vantaRef}></div>;
 };
-export default Hero
+export default Hero;
