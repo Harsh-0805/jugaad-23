@@ -9,7 +9,7 @@ const App = () => {
       <div className="relative z-0 bg-black">
         <Timeline />
       </div>
-      <About/>
+      <About />
       <Footer />
     </BrowserRouter>
   );
