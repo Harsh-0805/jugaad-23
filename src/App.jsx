@@ -2,9 +2,9 @@ import { useState } from "react";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import Modal from "./components/Modal";
-import Name from "./components/Name";
 import Sponser from "./components/Sponser";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import { BrowserRouter } from "react-router-dom";
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -16,13 +16,11 @@ const App = () => {
     }
   };
   return (
-    <>
-    <Nav/>
-      <div className="absolute left-1/2 z-10 top-50">
-        <Name/>
-      </div>
+    <BrowserRouter>
+      <Nav />
+
       <Hero />
-      <div className="absolute top-3/4 left-4">
+      <div className="absolute top-3/4 right-1/2 ">
         <a
           href="#_"
           className="relative inline-block text-lg group"
@@ -39,8 +37,11 @@ const App = () => {
           ></span>
         </a>
       </div>
-      {isModalOpen && <Modal/>}
-    </>
+      {isModalOpen && <Modal />}
+
+      <Sponser />
+      <Footer />
+    </BrowserRouter>
   );
 };
 
