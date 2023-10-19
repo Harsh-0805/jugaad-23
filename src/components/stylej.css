@@ -15,49 +15,7 @@
   flex-direction: column;
   justify-content: center;
 }
-#anima h1 {
-  color: black;
-  font-size: 50px;
-  /* font-family: roboto; */
-  font-weight: 900;
-  animation: animate 3s ease-in-out;
-  animation-iteration-count: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@keyframes animate {
-  0% {
-    transform: translateY(-70px);
-  }
-  50% {
-    transform: translateY(70px);
-  }
-  100% {
-    transform: translateY(-70px);
-  }
-}
-p {
-  margin-top: 60px;
-  font-size: 30px;
-  /* font-family: roboto; */
-  color: black;
-  justify-content: center;
-  align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  width: 50%;
-  animation: pxy 2s ease-out;
-  animation-iteration-count: 1;
-}
-@keyframes pxy {
-  0% {
-    transform: translateX(-70px);
-  }
-  50% {
-    transform: translateX(70px);
-  }
-}
+
 .animation {
   width: 400px;
   height: 400px;

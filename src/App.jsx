@@ -1,15 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
-import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Navbar from "./components/Navbar";
+import Sponser from "./components/Sponsor";
+import Hero from "./components/Hero";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-black">
-        <Timeline />
-      </div>
+      <Navbar />
+      <Hero />
       <About />
+      <Sponser />
       <Footer />
     </BrowserRouter>
   );
