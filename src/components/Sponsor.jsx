@@ -6,7 +6,7 @@ const Sponser = () => {
   return (
     <>
       <div id="Sponsors" className="text-black sponsers ">
-        <h1>OUR SPONSERS</h1>
+        <h1>OUR SPONSORS</h1>
         <div className="sponsercontainer">
           <div className="row">
             <div

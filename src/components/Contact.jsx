@@ -12,17 +12,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-evenly items-center">
           <div className="justify-center items-center flex flex-col">
             <div className="memberbox">
-              <div
-                className="memberphoto col-md-12"
-                style={{
-                  backgroundImage:
-                    "url('http://www.hbo.com/assets/images/series/game-of-thrones/downloads/stark/wallpaper-stark-sigil-1600.jpg')",
-                }}
-              >
-                <a href="" className="mphotohover">
-                  <img src="http://cybersky.in/view.png" alt="" />
-                </a>
-              </div>
+              
               <div className="membername col-md-12">Aquib Sheikh</div>
               <div className="membersubtitle col-md-12">8581930601</div>
             </div>
@@ -30,17 +20,7 @@ const Contact = () => {
 
           <div className="justify-center items-center flex flex-col">
             <div className="memberbox">
-              <div
-                className="memberphoto col-md-12"
-                style={{
-                  backgroundImage:
-                    "url('http://www.hbo.com/assets/images/series/game-of-thrones/downloads/stark/wallpaper-stark-sigil-1600.jpg')",
-                }}
-              >
-                <a href="" className="mphotohover">
-                  <img src="http://cybersky.in/view.png" alt="" />
-                </a>
-              </div>
+              
               <div className="membername col-md-12">Anurag Tiwari</div>
               <div className="membersubtitle col-md-12">7572041766</div>
             </div>
@@ -48,21 +28,36 @@ const Contact = () => {
 
           <div className="justify-center items-center flex flex-col">
             <div className="memberbox">
-              <div
-                className="memberphoto col-md-12"
-                style={{
-                  backgroundImage:
-                    "url('http://www.hbo.com/assets/images/series/game-of-thrones/downloads/stark/wallpaper-stark-sigil-1600.jpg')",
-                }}
-              >
-                <a href="" className="mphotohover">
-                  <img src="http://cybersky.in/view.png" alt="" />
-                </a>
-              </div>
+              
               <div className="membername col-md-12">Rishabh Shikhare</div>
               <div className="membersubtitle col-md-12">9890641465</div>
             </div>
           </div>
+
+          <div className="justify-center items-center flex flex-col">
+            <div className="memberbox">
+              
+              <div className="membername col-md-12">Suyash Bagale</div>
+              <div className="membersubtitle col-md-12">8605121528</div>
+            </div>
+          </div>
+
+          <div className="justify-center items-center flex flex-col">
+            <div className="memberbox">
+              
+              <div className="membername col-md-12">Anshul Mukati</div>
+              <div className="membersubtitle col-md-12">9479402002</div>
+            </div>
+          </div>
+
+          <div className="justify-center items-center flex flex-col">
+            <div className="memberbox">
+              
+              <div className="membername col-md-12">Radha Rahangdale</div>
+              <div className="membersubtitle col-md-12">8830958579</div>
+            </div>
+          </div>
+
         </div>
       </div>
     </>
