@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./hero.css";
 import Jugaad from "../assets/jugaadnew.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [login, setlogin] = useState(false);
@@ -34,9 +35,16 @@ const Hero = () => {
   return (
     <>
       <div id="Sponser" className="text-black herobg ">
-        <div>
+        <motion.div
+          initial={{ y: "-2rem", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 2,
+            type: "ease-in",
+          }}
+        >
           <img src={Jugaad} alt="" className="" />
-        </div>
+        </motion.div>
         <div>
           <h1 className="font-extrabold text-xs scale-110 md:text-2xl flex justify-center text-center items-center">
             How much you can make from
@@ -45,7 +53,13 @@ const Hero = () => {
           </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 p-4 justify-evenly items-center">
-          <a
+          <motion.a
+            initial={{ x: "-2rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "ease-in",
+            }}
             href="#_"
             class="relative inline-flex text-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
             onClick={openbox}
@@ -53,15 +67,21 @@ const Hero = () => {
             <span class="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
 
             <span class="relative">Register Here</span>
-          </a>
+          </motion.a>
 
-          <a
+          <motion.a
+            initial={{ x: "2rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "ease-in",
+            }}
             href="_"
             class="relative inline-flex text-center justify-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
           >
             <span class="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
             <span class="relative text-center">Brochure</span>
-          </a>
+          </motion.a>
         </div>
         {box && (
           <a
