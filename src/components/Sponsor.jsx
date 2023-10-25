@@ -5,7 +5,7 @@ import "./sponsor.css";
 const Sponser = () => {
   return (
     <>
-      <div id="Sponser" className="text-black sponsers ">
+      <div id="Sponsors" className="text-black sponsers ">
         <h1>OUR SPONSERS</h1>
         <div className="sponsercontainer">
           <div className="row">

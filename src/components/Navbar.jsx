@@ -9,10 +9,10 @@ import React from "react";
 import ecellLogoWhite from "../assets/ecell-white-img.png";
 
 const navigation = [
-  { name: "Home", href: "/explore" },
-  { name: "About", href: "/explore/#about" },
-  { name: "Sponsors", href: "/sponsors" },
-  { name: "Contact", href: "/explore/#contact" },
+  { name: "Home", href: "/#" },
+  { name: "About", href: "/#bigabout" },
+  { name: "Sponsors", href: "/#Sponsors" },
+  { name: "Contact", href: "/#bigcontact" },
 ];
 
 const Navbar = () => {
