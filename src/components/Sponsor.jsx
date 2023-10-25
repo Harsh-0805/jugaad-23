@@ -5,9 +5,9 @@ import "./sponsor.css";
 const Sponser = () => {
   return (
     <>
-      <div id="Sponsors" className="text-black sponsers ">
-        <h1>OUR SPONSORS</h1>
-        <div className="sponsercontainer">
+      <div id="Sponsors" className="text-black sponsers">
+        <h1 className="text-center">OUR SPONSORS</h1>
+        <div className="sponsercontainer m-4">
           <div className="row">
             <div
               data-aos="fade-right"
