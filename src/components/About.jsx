@@ -1,13 +1,14 @@
 import React from "react";
 import "./style.css";
 import notes from "../assets/about.gif";
+import "./About.css";
 
 const About = () => {
   return (
     <>
       <section
         id="bigabout"
-        className="pt-12 px-12 sm:pt-10 sm:px-10 lg:pt-[120px] pb-12 lg:pb-[90px] text-black overflow-hidden "
+        className="about pt-12 px-12 sm:pt-10 sm:px-10 lg:pt-[120px] pb-12 lg:pb-[90px] text-black overflow-hidden "
       >
         <div className="container">
           <div className="flex flex-wrap items-center justify-between -mx-4">
@@ -37,12 +38,12 @@ const About = () => {
                   expand their horizon of knowledge into the real world and get
                   a glimpse of what it's like to be an entrepreneur in you.
                 </p>
-                <a
+                {/* <a
                   href="/#contact"
                   className="inline-flex items-center justify-center px-10 py-4 text-base font-normal text-center text-white rounded-lg bg-[blue] hover:bg-opacity-90 lg:px-8 xl:px-10"
                 >
                   Register Now
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
