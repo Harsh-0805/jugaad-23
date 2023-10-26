@@ -2,6 +2,10 @@
   background-image: url("background.jpg");
 }
 
+#register {
+  background-image: url("background.jpg");
+}
+
 @keyframes jugad {
   0% {
     transform: translateY(-30px);
