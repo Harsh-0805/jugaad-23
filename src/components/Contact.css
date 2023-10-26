@@ -1,5 +1,5 @@
 #bigcontact {
-  background-image: url("background.jpg");
+  background-image: url("../assets/backgroung.jpg");
 }
 .memberbox {
   margin: 20px 50px;
@@ -25,12 +25,6 @@
   transition: 0.1s linear;
   backface-visibility: hidden;
 }
-
-
-
-
-
-
 
 .membername {
   background-image: url("imgbg.jpg");
