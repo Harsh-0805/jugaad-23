@@ -25,7 +25,7 @@ function Register() {
     >
       <div className="flex flex-col w-full max-w-[450px] ">
         <h1 className="font-bold text-5xl text-center mb-21">Register Here</h1>
-        <div className="flex flex-row justify-center items-center mt-2">
+        <div className="flex flex-row justify-center scale-110 items-center mt-2">
           <div className="flex m-4">
             <input
               type="radio"

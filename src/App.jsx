@@ -6,6 +6,7 @@ import Sponser from "./components/Sponsor";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Register from "./components/Register";
+import Timeline from "./components/Timeline";
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       <Navbar />
       <Hero />
       <About />
-      <Sponser />
+      {/* <Sponser /> */}
+      <Timeline />
       <Register />
       <Contact />
       <Footer />
