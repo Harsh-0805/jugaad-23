@@ -63,7 +63,7 @@ function Register() {
               id="teamName"
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
-              className="border border-gray-400 rounded px-2 py-1 mb-2"
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
             />
           </div>
         )}
@@ -76,7 +76,7 @@ function Register() {
             id="teamLeaderName"
             value={teamLeaderName}
             onChange={(e) => setTeamLeaderName(e.target.value)}
-            className="border border-gray-400 rounded px-2 py-1 mb-2"
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
           <label htmlFor="phoneNumber" className="mb-2">
             Phone Number
@@ -86,7 +86,7 @@ function Register() {
             id="phoneNumber"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            className="border border-gray-400 rounded px-2 py-1 mb-2"
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
           <label htmlFor="email" className="mb-2 ">
             Email Address
@@ -96,7 +96,7 @@ function Register() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border border-gray-400 rounded px-2 py-1 mb-2"
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
         </div>
         <button

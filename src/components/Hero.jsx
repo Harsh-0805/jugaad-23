@@ -33,7 +33,7 @@ const Hero = () => {
               duration: 2,
               type: "ease-in",
             }}
-            href="#_"
+            href="#register"
             className="relative inline-flex text-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
           >
             <span className="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>

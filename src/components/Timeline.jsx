@@ -58,7 +58,9 @@ const Timeline = () => {
       <motion.div
         className={`${textVariant()} p-4 items-center justify-center text-center`}
       >
-        <h2 className={`${styles.sectionHeadText}`}>Process</h2>
+        <h2 className={`${styles.sectionHeadText} text-black font-bold`}>
+          Process
+        </h2>
       </motion.div>
 
       <div className="pb-4 flex flex-col">
