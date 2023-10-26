@@ -34,11 +34,11 @@ const Hero = () => {
               type: "ease-in",
             }}
             href="#_"
-            class="relative inline-flex text-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
+            className="relative inline-flex text-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
           >
-            <span class="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+            <span className="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
 
-            <span class="relative">Register Here</span>
+            <span className="relative">Register Here</span>
           </motion.a>
 
           <motion.a
@@ -49,10 +49,10 @@ const Hero = () => {
               type: "ease-in",
             }}
             href="#_"
-            class="relative inline-flex text-center justify-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
+            className="relative inline-flex text-center justify-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
           >
-            <span class="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
-            <span class="relative text-center">Brochure</span>
+            <span className="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+            <span className="relative text-center">Brochure</span>
           </motion.a>
         </div>
       </div>

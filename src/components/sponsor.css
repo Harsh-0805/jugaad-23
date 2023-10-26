@@ -6,7 +6,7 @@ html {
 }
 .sponsers {
   width: 100%;
-  height: 120vh;
+  /* height: 100vh; */
   background-image: url(../assets/backgroung.jpg);
   background-repeat: no-repeat;
   background-blend-mode: overlay;
@@ -116,4 +116,21 @@ html {
   .sponsercards {
     height: 40%;
   }
+}
+
+.timeline {
+  width: 100%;
+  /* height: 100vh; */
+  background-image: url(../assets/backgroung.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  /* display: flex; */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* align-items: center;
+  flex-direction: column;
+  justify-content: center; */
+  /* font-family: "Roboto", sans-serif; */
 }

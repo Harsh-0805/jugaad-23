@@ -5,7 +5,7 @@ import {
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
-// import { styles } from "../styles";
+import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
@@ -13,7 +13,7 @@ import { textVariant } from "../utils/motion";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#fdc500", color: "#00509d" }}
+      contentStyle={{ background: "#fdc500", color: "#000" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
@@ -55,12 +55,13 @@ const ExperienceCard = ({ experience }) => {
 const Timeline = () => {
   return (
     <>
-      <motion.div className={textVariant()}>
-        {/* <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience</h2> */}
+      <motion.div
+        className={`${textVariant()} p-4 items-center justify-center text-center`}
+      >
+        <h2 className={`${styles.sectionHeadText}`}>Process</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col ">
+      <div className="pb-4 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
