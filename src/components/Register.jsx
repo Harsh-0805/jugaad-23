@@ -21,7 +21,7 @@ function Register() {
     <form
       id="register"
       onSubmit={handleSubmit}
-      className="container text-black about mx-auto py-16 px-5 text-center xl:text-left flex items-center justify-center h-full"
+      className=" text-black about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center h-full"
     >
       <div className="flex flex-col w-full max-w-[450px] ">
         <h1 className="font-bold text-5xl text-center mb-21">Register Here</h1>

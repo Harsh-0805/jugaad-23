@@ -4,6 +4,7 @@
 
 #register {
   background-image: url("background.jpg");
+  background-size: cover;
 }
 
 @keyframes jugad {
