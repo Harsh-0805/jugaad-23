@@ -29,8 +29,10 @@ const Contact = () => {
                 type: "ease-in",
               }}
             >
-              <div className="membername col-md-12">Anshul Mukati</div>
-              <div className="membersubtitle col-md-12">9479402002</div>
+              <a href="https://wa.me/9479402002" target="_blank">
+                <div className="membername col-md-12">Anshul Mukati</div>
+                <div className="membersubtitle col-md-12">9479402002</div>
+              </a>
             </motion.div>
           </div>
 
@@ -44,8 +46,10 @@ const Contact = () => {
                 type: "ease-in",
               }}
             >
-              <div className="membername col-md-12">Radha Rahangdale</div>
-              <div className="membersubtitle col-md-12">8830958579</div>
+              <a href="https://wa.me/8830958579" target="_blank">
+                <div className="membername col-md-12">Radha Rahangdale</div>
+                <div className="membersubtitle col-md-12">8830958579</div>
+              </a>
             </motion.div>
           </div>
         </div>

@@ -8,6 +8,11 @@ function Register() {
   const [teamName, setTeamName] = useState("");
   const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+  const [teamSize, setTeamSize] = useState("");
+
+  function handleTeamSizeChange(event) {
+    setTeamSize(event.target.value);
+  }
 
   function handleCheckboxChange() {
     setIsChecked(!isChecked);
@@ -21,6 +26,35 @@ function Register() {
     e.preventDefault();
     // handle form submission here
   };
+
+  function renderTeamInputs() {
+    const inputs = [];
+    for (let i = 0; i < parseInt(teamSize) - 1; i++) {
+      inputs.push(
+        // <div key={i}>
+        //   <label htmlFor={`teamMember${i + 1}`}>Team Member {i + 1}</label>
+        //   <input
+        //     type="text"
+        //     id={`teamMember${i + 1}`}
+        //     name={`teamMember${i + 1}`}
+        //     className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+        //   />
+        // </div>
+        <div className="flex flex-col mb-2" key={i}>
+          <label htmlFor={`teamMember${i + 1}`} className="mb-2">
+            Team Member {i + 1}
+          </label>
+          <input
+            type="text"
+            id={`teamMember${i + 1}`}
+            name={`teamMember${i + 1}`}
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+          />
+        </div>
+      );
+    }
+    return inputs;
+  }
 
   return (
     <form
@@ -75,14 +109,16 @@ function Register() {
             </label>
 
             <select
-              id="countries"
+              name="teamSize"
               class="bg-white border border-gray-300 text-black rounded px-2 py-1 mb-2"
+              value={teamSize}
+              onChange={handleTeamSizeChange}
             >
               <option selected>Choose a Team size</option>
-              <option value="One">1</option>
-              <option value="Two">2</option>
-              <option value="Three">3</option>
-              <option value="Four">4</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
             </select>
           </div>
         )}
@@ -97,6 +133,7 @@ function Register() {
             onChange={(e) => setTeamLeaderName(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
+          {teamSize && renderTeamInputs()}
           <label htmlFor="phoneNumber" className="mb-2">
             Phone Number
           </label>
@@ -118,12 +155,12 @@ function Register() {
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
         </div>
-        <label className="mb-2 ">
+        <label className="mb-2">
           <input
             type="checkbox"
             checked={isChecked}
             onChange={handleCheckboxChange}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            className="border bg-[#fff] text-[black] border-gray-400 rounded mb-2"
           />
           I agree to the terms and conditions mentioned in the Brochure
         </label>
