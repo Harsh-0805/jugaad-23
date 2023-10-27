@@ -19,7 +19,7 @@ const Hero = () => {
         </motion.div>
 
         <div>
-          <h1 className="font-extrabold text-sm scale-125 md:text-2xl flex justify-center text-center items-center">
+          <h1 className="font-extrabold text-sm sm:scale-125 md:text-2xl flex justify-center text-center items-center">
             How much you can make from
             <span className="text-[yellow]">&nbsp;100&nbsp;</span>
             bucks ??

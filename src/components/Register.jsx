@@ -7,6 +7,11 @@ function Register() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [teamName, setTeamName] = useState("");
   const [email, setEmail] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+
+  function handleCheckboxChange() {
+    setIsChecked(!isChecked);
+  }
 
   const handleOptionChange = (e) => {
     setIsTeam(e.target.value === "team");
@@ -71,7 +76,7 @@ function Register() {
 
             <select
               id="countries"
-              class="bg-white border border-gray-300 text-black text-sm rounded-lg block w-full px-2 py-1 mb-2"
+              class="bg-white border border-gray-300 text-black rounded px-2 py-1 mb-2"
             >
               <option selected>Choose a Team size</option>
               <option value="One">1</option>
@@ -113,13 +118,23 @@ function Register() {
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
         </div>
+        <label className="mb-2 ">
+          <input
+            type="checkbox"
+            checked={isChecked}
+            onChange={handleCheckboxChange}
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+          />
+          I agree to the terms and conditions mentioned in the Brochure
+        </label>
         <button
           type="submit"
+          disabled={!isChecked}
           class="rounded-md px-3.5 max-w-[170px] py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#000] text-white"
         >
           <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[orange] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
           <span class="relative text-black transition duration-300 group-hover:text-white ease">
-            Button Text
+            Register
           </span>
         </button>
       </div>
