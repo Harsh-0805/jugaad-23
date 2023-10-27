@@ -129,6 +129,7 @@ function Register() {
         </label>
         <button
           type="submit"
+          href="https://flowbite.com/docs/forms/select/"
           disabled={!isChecked}
           class="rounded-md px-3.5 max-w-[170px] py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#000] text-white"
         >

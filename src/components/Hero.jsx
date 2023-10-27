@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./hero.css";
 import Jugaad from "../assets/jugaadnew.png";
 import { motion } from "framer-motion";
+import Rules from "../assets/RULES.pdf";
 
 const Hero = () => {
   return (
@@ -38,7 +39,7 @@ const Hero = () => {
           >
             <span className="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
 
-            <span className="relative">Register Here</span>
+            <span className="relative text-center">Register Here</span>
           </motion.a>
 
           <motion.a
@@ -48,7 +49,8 @@ const Hero = () => {
               duration: 2,
               type: "ease-in",
             }}
-            href="#_"
+            href={Rules}
+            download="RULES.pdf"
             className="relative inline-flex text-center justify-center items-center px-12 py-3 m-4 overflow-hidden text-lg font-medium text-[yellow] border-2 border-[yellow] rounded-full hover:text-white group hover:bg-gray-50"
           >
             <span className="absolute left-0 block w-full h-0 transition-all bg-orange-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
