@@ -65,6 +65,20 @@ function Register() {
               onChange={(e) => setTeamName(e.target.value)}
               className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
             />
+            <label htmlFor="teamName" className="mb-2">
+              Team Size
+            </label>
+
+            <select
+              id="countries"
+              class="bg-white border border-gray-300 text-black text-sm rounded-lg block w-full px-2 py-1 mb-2"
+            >
+              <option selected>Choose a Team size</option>
+              <option value="One">1</option>
+              <option value="Two">2</option>
+              <option value="Three">3</option>
+              <option value="Four">4</option>
+            </select>
           </div>
         )}
         <div className="flex flex-col mb-4">
