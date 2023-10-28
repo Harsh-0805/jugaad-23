@@ -22,21 +22,22 @@ const About = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="mt-10 mr-8 lg:mt-0">
+              <div className="mt-10 mr-4 lg:mt-0">
                 <span className="block mb-2 mr-4 text-[50px] font-semibold text-black">
                   About Jugaad
                 </span>
                 <p className="mb-8 text-justify text-lg text-body-color">
-                  Jugaad by The Entrepreneurship Cell, VNIT Nagpur is an annual
-                  event which aims mainly at the development of skills like
-                  money multiplication, management, creative ideation,
-                  bargaining and what not. 100 Rupees will be provided to each
-                  team and they have to maximize profits by using their
-                  creativity. It is an event that will thoroughly challenge even
-                  the best entrepreneurial minds out there and force everyone to
-                  think out of the box. Jugaad is a must for those who wish to
-                  expand their horizon of knowledge into the real world and get
-                  a glimpse of what it's like to be an entrepreneur in you.
+                  Jugaad, organized by The Entrepreneurship Cell at VNIT Nagpur,
+                  is an annual event with the primary goal of fostering skills
+                  such as money multiplication, management, creative ideation,
+                  bargaining, and more. Each team will be provided with 100
+                  Rupees, and their task is to maximize profits through their
+                  creativity. This event is a true test that will challenge even
+                  the most seasoned entrepreneurial minds, pushing everyone to
+                  think beyond conventional boundaries. Jugaad is a must-attend
+                  for those who aspire to broaden their knowledge horizon in the
+                  real world and gain insight into the entrepreneurial spirit
+                  within themselves.
                 </p>
                 {/* <a
                   href="/#contact"
