@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./style.css";
+// import { useState } from "react";
+import axios from "axios"; // Import Axios
 
 function Register() {
   const [isTeam, setIsTeam] = useState(false);
@@ -9,6 +11,9 @@ function Register() {
   const [email, setEmail] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [teamSize, setTeamSize] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(true);
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   function handleTeamSizeChange(event) {
     setTeamSize(event.target.value);
@@ -22,9 +27,55 @@ function Register() {
     setIsTeam(e.target.value === "team");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // handle form submission here
+    try {
+      setIsLoading(true);
+      // Construct the data to send in the request
+      const userData = {
+        teamName,
+        teamSize,
+        teamLeaderName,
+        email,
+        phoneNumber,
+      
+      };
+
+      if (isTeam) {
+        // Make sure that each team member input field has a value
+        for (let i = 0; i < parseInt(teamSize) - 1; i++) {
+          const teamMemberInput = document.getElementById(`teamMember${i + 1}`);
+          if (!teamMemberInput.value) {
+            throw new Error(`Team member ${i + 1} name is required`);
+          }
+        }
+  
+        // Add the team member names to the user data object
+        for (let i = 0; i < parseInt(teamSize) - 1; i++) {
+          userData[`teamMember${i + 1}`] = document.getElementById(`teamMember${i + 1}`).value;
+        }
+      }
+      // Make the POST request to your backend
+      const response = await axios.post("https://jugaadecell.onrender.com/api/register", userData); // Adjust the URL as needed
+  
+      // Handle the response (you can display a success message or redirect to a new page)
+      console.log("Registration successful:", response.data);
+      setRegistrationSuccess(true); 
+    } catch (error) {
+      setErrorMsg(false)
+      if (error.response && error.response.status === 400) {
+        setErrorMsg(false)
+        // Server validation error, you can handle or display the error message as needed
+        console.error("Error registering user:", error.response.data.error);
+      } else {
+        setErrorMsg(false)
+        // Handle other errors
+        console.error("Error registering user:", error);
+      } 
+    }finally {
+      setIsLoading(false);
+      setErrorMsg(true) // Reset loading state to false when the request is complete
+    }
   };
 
   function renderTeamInputs() {
@@ -48,6 +99,7 @@ function Register() {
             type="text"
             id={`teamMember${i + 1}`}
             name={`teamMember${i + 1}`}
+            value={`teamMember${i + 1}`}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
         </div>
@@ -56,6 +108,13 @@ function Register() {
     return inputs;
   }
 
+  if (registrationSuccess) {
+    return (
+      <div className="text-center text-green-500">
+        Registration Successful!
+      </div>
+    );
+  }
   return (
     <form
       id="register"
@@ -94,16 +153,17 @@ function Register() {
         </div>
         {isTeam && (
           <div className="flex flex-col">
-            <label htmlFor="teamName" className="mb-2">
+            {/* <label htmlFor="teamName" className="mb-2">
               Team Name
             </label>
             <input
               type="text"
               id="teamName"
+              name="teamName"
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
               className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-            />
+            /> */}
             <label htmlFor="teamName" className="mb-2">
               Team Size
             </label>
@@ -123,12 +183,24 @@ function Register() {
           </div>
         )}
         <div className="flex flex-col mb-4">
+        <label htmlFor="teamName" className="mb-2">
+              Team Name
+            </label>
+            <input
+              type="text"
+              id="teamName"
+              name="teamName"
+              value={teamName}
+              onChange={(e) => setTeamName(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            />
           <label htmlFor="teamLeaderName" className="mb-2">
             {isTeam ? "Team Leader Name" : "Name"}
           </label>
           <input
             type="text"
             id="teamLeaderName"
+            name="teamLeaderName"
             value={teamLeaderName}
             onChange={(e) => setTeamLeaderName(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
@@ -140,6 +212,7 @@ function Register() {
           <input
             type="number"
             id="phoneNumber"
+            name="phoneNumber"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
@@ -150,6 +223,7 @@ function Register() {
           <input
             type="email"
             id="email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
@@ -164,6 +238,8 @@ function Register() {
           />
           I agree to the terms and conditions mentioned in the Brochure
         </label>
+        {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
+        {errorMsg ? "":<div className="text-red-500">team name and email should be unique</div> }
         <button
           type="submit"
           href="https://flowbite.com/docs/forms/select/"
@@ -172,7 +248,7 @@ function Register() {
         >
           <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[orange] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
           <span class="relative text-black transition duration-300 group-hover:text-white ease">
-            Register
+            {isLoading ? "Loading" : "Register"}
           </span>
         </button>
       </div>
