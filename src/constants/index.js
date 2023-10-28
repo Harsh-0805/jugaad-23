@@ -30,7 +30,7 @@ const experiences = [
     // date: "5 November 2023",
     points: [
       "And guess what ? These PROFITS* are all yours.",
-      "Plus, you will get a chance to earn exciting prizez worth INR 50K.",
+      "Plus, you will get a chance to earn exciting prizes worth INR 50K.",
       "So what are you waiting for ? Get your pockets filled",
     ],
   },
