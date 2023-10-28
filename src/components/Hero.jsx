@@ -8,6 +8,12 @@ const Hero = () => {
   return (
     <>
       <div id="Sponser" className="text-black herobg ">
+        <div>
+          <h1 className="font-bold text-xl">
+            <span>Paisa kamaya nhi, </span>
+            <span>banaya jata hai</span>
+          </h1>
+        </div>
         <motion.div
           initial={{ y: "-2rem", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

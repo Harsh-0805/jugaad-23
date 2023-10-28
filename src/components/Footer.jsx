@@ -25,36 +25,38 @@ const Footer = () => {
                   Quick Links
                 </p>
                 <nav className="flex flex-col mt-4 space-y-2 items-center lg:items-start text-sm text-white">
-                  <Link
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
                     className="hover:opacity-75 uppercase"
                     href="https://startupconclave.ecellvnit.org/"
                   >
                     Startup Conclave
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 uppercase"
                     target="_blank"
                     rel="noreferrer"
                     href="https://expo.ecellvnit.org/"
                   >
                     Startup Expo
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 uppercase"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.ecellvnit.org/merchandise/index.php"
                   >
                     Merchandise
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 uppercase"
                     target="_blank"
                     rel="noreferrer"
                     href="https://neo.ecellvnit.org/"
                   >
                     NEO
-                  </Link>
+                  </a>
                 </nav>
               </div>
               <div className="flex flex-col items-center gap-2">
@@ -85,7 +87,7 @@ const Footer = () => {
               <div className="flex flex-col items-center gap-2">
                 <p className="font-bold text-xl uppercase">Follow Us</p>
                 <nav className="flex flex-col mt-4 space-y-3 items-start text-sm text-white">
-                  <Link
+                  <a
                     className="hover:opacity-75 flex justify-center gap-4"
                     href="https://www.instagram.com/ecellvnit/"
                     target="_blank"
@@ -104,8 +106,8 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-lg">Instagram</span>
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 flex justify-center gap-4"
                     href="https://www.linkedin.com/company/theentrepreneurshipcellvnit/mycompany/"
                     target="_blank"
@@ -124,8 +126,8 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-lg">LinkedIn</span>
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 flex justify-center gap-4"
                     href="https://m.facebook.com/vnitecell/"
                     target="_blank"
@@ -146,8 +148,8 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-lg">Facebook</span>
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 flex justify-center gap-4"
                     href="https://www.youtube.com/channel/UC0KNOmODhqLcEpcfN9qEsIQ"
                     target="_blank"
@@ -166,8 +168,8 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-lg">YouTube</span>
-                  </Link>
-                  <Link
+                  </a>
+                  <a
                     className="hover:opacity-75 flex justify-center gap-4"
                     href="https://twitter.com/ecell_vnit"
                     target="_blank"
@@ -186,7 +188,7 @@ const Footer = () => {
                       />
                     </svg>
                     <span className="text-lg">Twitter</span>
-                  </Link>
+                  </a>
                 </nav>
               </div>
             </div>

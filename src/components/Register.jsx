@@ -38,7 +38,6 @@ function Register() {
         teamLeaderName,
         email,
         phoneNumber,
-      
       };
 
       if (isTeam) {
@@ -49,32 +48,37 @@ function Register() {
             throw new Error(`Team member ${i + 1} name is required`);
           }
         }
-  
+
         // Add the team member names to the user data object
         for (let i = 0; i < parseInt(teamSize) - 1; i++) {
-          userData[`teamMember${i + 1}`] = document.getElementById(`teamMember${i + 1}`).value;
+          userData[`teamMember${i + 1}`] = document.getElementById(
+            `teamMember${i + 1}`
+          ).value;
         }
       }
       // Make the POST request to your backend
-      const response = await axios.post("https://jugaadecell.onrender.com/api/register", userData); // Adjust the URL as needed
-  
+      const response = await axios.post(
+        "https://jugaadecell.onrender.com/api/register",
+        userData
+      ); // Adjust the URL as needed
+
       // Handle the response (you can display a success message or redirect to a new page)
       console.log("Registration successful:", response.data);
-      setRegistrationSuccess(true); 
+      setRegistrationSuccess(true);
     } catch (error) {
-      setErrorMsg(false)
+      setErrorMsg(false);
       if (error.response && error.response.status === 400) {
-        setErrorMsg(false)
+        setErrorMsg(false);
         // Server validation error, you can handle or display the error message as needed
         console.error("Error registering user:", error.response.data.error);
       } else {
-        setErrorMsg(false)
+        setErrorMsg(false);
         // Handle other errors
         console.error("Error registering user:", error);
-      } 
-    }finally {
+      }
+    } finally {
       setIsLoading(false);
-      setErrorMsg(true) // Reset loading state to false when the request is complete
+      setErrorMsg(true); // Reset loading state to false when the request is complete
     }
   };
 
@@ -110,8 +114,16 @@ function Register() {
 
   if (registrationSuccess) {
     return (
-      <div className="text-center text-green-500">
-        Registration Successful!
+      <div
+        id="register"
+        className="flex items-center justify-center h-full bg-cover"
+      >
+        <div className=" rounded-lg shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-black mb-4">
+            Registration Successful!
+          </h2>
+          <p className="text-black">Thank you for registering.</p>
+        </div>
       </div>
     );
   }
@@ -183,17 +195,17 @@ function Register() {
           </div>
         )}
         <div className="flex flex-col mb-4">
-        <label htmlFor="teamName" className="mb-2">
-              Team Name
-            </label>
-            <input
-              type="text"
-              id="teamName"
-              name="teamName"
-              value={teamName}
-              onChange={(e) => setTeamName(e.target.value)}
-              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-            />
+          <label htmlFor="teamName" className="mb-2">
+            Team Name
+          </label>
+          <input
+            type="text"
+            id="teamName"
+            name="teamName"
+            value={teamName}
+            onChange={(e) => setTeamName(e.target.value)}
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+          />
           <label htmlFor="teamLeaderName" className="mb-2">
             {isTeam ? "Team Leader Name" : "Name"}
           </label>
@@ -239,7 +251,13 @@ function Register() {
           I agree to the terms and conditions mentioned in the Brochure
         </label>
         {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
-        {errorMsg ? "":<div className="text-red-500">team name and email should be unique</div> }
+        {errorMsg ? (
+          ""
+        ) : (
+          <div className="text-red-500">
+            team name and email should be unique
+          </div>
+        )}
         <button
           type="submit"
           href="https://flowbite.com/docs/forms/select/"
