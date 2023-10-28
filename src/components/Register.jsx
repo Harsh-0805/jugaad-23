@@ -99,7 +99,7 @@ function Register() {
             type="text"
             id={`teamMember${i + 1}`}
             name={`teamMember${i + 1}`}
-            value={`teamMember${i + 1}`}
+            // value={`teamMember${i + 1}`}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
         </div>
