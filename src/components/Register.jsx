@@ -248,7 +248,7 @@ function Register() {
             onChange={handleCheckboxChange}
             className="border bg-[#fff] text-[black] border-gray-400 rounded mb-2"
           />
-          I agree to the terms and conditions mentioned in the Brochure
+          I agree to the terms and conditions mentioned in the Rule Book
         </label>
         {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
         {errorMsg ? (
