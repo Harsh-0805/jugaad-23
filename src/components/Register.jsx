@@ -118,11 +118,11 @@ function Register() {
         id="register"
         className="flex items-center justify-center h-full bg-cover"
       >
-        <div className=" rounded-lg shadow-lg p-8">
+        <div className=" rounded-lg shadow-lg p-8 backdrop-blur-sm">
           <h2 className="text-2xl font-bold text-black mb-4">
             Registration Successful!
           </h2>
-          <p className="text-black">Thank you for registering.</p>
+          <p className="text-black">See you on 5th Nov at 9am </p>
         </div>
       </div>
     );
