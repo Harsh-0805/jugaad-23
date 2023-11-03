@@ -191,21 +191,20 @@ function Register() {
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
-
-            <label htmlFor="teamName" className="mb-2">
-              Team Name
-            </label>
-            <input
-              type="text"
-              id="teamName"
-              name="teamName"
-              value={teamName}
-              onChange={(e) => setTeamName(e.target.value)}
-              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-            />
           </div>
         )}
         <div className="flex flex-col mb-4">
+          <label htmlFor="teamName" className="mb-2">
+            Team Name
+          </label>
+          <input
+            type="text"
+            id="teamName"
+            name="teamName"
+            value={teamName}
+            onChange={(e) => setTeamName(e.target.value)}
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+          />
           <label htmlFor="teamLeaderName" className="mb-2">
             {isTeam ? "Team Leader Name" : "Name"}
           </label>
